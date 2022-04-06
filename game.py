@@ -1,13 +1,24 @@
-
-
+from human import Human
+from computer import Computer
 class Game():
-    def __init__(self, first_player, second_player):
-        self.player_one = first_player
-        self.player_two = second_player
-        
+    def __init__(self):
+        self.player_one = Human()
+        self.player_two = None
+       
 
 
-    def run_game():
-         print('Welcome to a game of Rock, Paper, Scissors, Lizzard, Spock!')
-         print('Rule Key is as follows: Rock crushes Scissors, Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock ')   
-         self.player_one.choose_gesture('Rock')
+    def run_game(self):
+        print('Welcome to a game of Rock, Paper, Scissors, Lizzard, Spock!')
+        print('Rule Key is as follows: Rock crushes Scissors, Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock ')   
+        self.player_two_choice()  
+        # self.player_one.choose_gesture()
+
+    def player_two_choice(self):
+        opponent_choice = input('Do you want to play the computer? y/n: ')
+        if opponent_choice == 'y':
+            self.player_two = Computer()
+            print('Player Two is the computer')
+        else:
+            self.player_two = Human()
+            print('Player Two is also human')
+
