@@ -10,7 +10,8 @@ class Game():
     def run_game(self):
         print('Welcome to a game of Rock, Paper, Scissors, Lizzard, Spock!')
         print('Rule Key is as follows: Rock crushes Scissors, Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock ')   
-        self.player_two_choice()  
+        self.player_two_choice()
+        self.select_gesture()  
         # self.player_one.choose_gesture()
 
     def player_two_choice(self):
@@ -21,4 +22,10 @@ class Game():
         else:
             self.player_two = Human()
             print('Player Two is also human')
+
+    def select_gesture(self):
+        print('Player One a Human, will select a gesture first!')
+        self.player_one.choose_gesture()
+        
+
 
