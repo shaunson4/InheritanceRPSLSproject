@@ -14,6 +14,11 @@ class Game():
         while self.player_one.score < 2 and self.player_two.score < 2:
             self.select_gesture()
             self.compare_gestures()
+        if self.player_one.score >= 2:
+            print('Player One WINS the GAME!')
+        else:
+            print('Player Two WINS the GAME!')
+        print('THE END, Thanks for playing!')
             
        
 
