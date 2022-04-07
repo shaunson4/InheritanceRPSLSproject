@@ -6,8 +6,6 @@ class Computer(Player):
         super().__init__()
 
     def choose_gesture(self):
-
-        super().choose_gesture()
         self.chosen_gesture = random.choice (self.list_of_possible_gestures) 
 
 
